@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Auction System</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🏆 Simple Auction System</h1>
+            <p>Place your bids and compete with other users!</p>
+        </header>
+
+        <main>
+            <!-- Auction Creation Section -->
+            <section class="create-auction">
+                <h2>Create New Auction</h2>
+                <form id="auctionForm">
+                    <div class="form-group">
+                        <label for="itemName">Item Name:</label>
+                        <input type="text" id="itemName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="itemDescription">Description:</label>
+                        <textarea id="itemDescription" rows="3"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="startingPrice">Starting Price ($):</label>
+                        <input type="number" id="startingPrice" min="1" step="0.01" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="duration">Duration (minutes):</label>
+                        <input type="number" id="duration" min="1" max="1440" value="60" required>
+                    </div>
+                    <button type="submit">Create Auction</button>
+                </form>
+            </section>
+
+            <!-- Active Auctions Section -->
+            <section class="auctions">
+                <h2>Active Auctions</h2>
+                <div id="auctionsList">
+                    <!-- Auctions will be populated here -->
+                </div>
+            </section>
+
+            <!-- Completed Auctions Section -->
+            <section class="completed-auctions">
+                <h2>Completed Auctions</h2>
+                <div id="completedAuctionsList">
+                    <!-- Completed auctions will be populated here -->
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- Bid Modal -->
+    <div id="bidModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h3>Place Your Bid</h3>
+            <form id="bidForm">
+                <div class="form-group">
+                    <label for="bidderName">Your Name:</label>
+                    <input type="text" id="bidderName" required>
+                </div>
+                <div class="form-group">
+                    <label for="bidAmount">Bid Amount ($):</label>
+                    <input type="number" id="bidAmount" min="0" step="0.01" required>
+                </div>
+                <div class="current-bid-info">
+                    <p>Current highest bid: $<span id="currentBidAmount">0</span></p>
+                    <p>Minimum bid: $<span id="minimumBid">0</span></p>
+                </div>
+                <button type="submit">Place Bid</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

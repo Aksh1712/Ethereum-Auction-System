@@ -1,0 +1,43 @@
+{
+  "name": "simple-auction-system",
+  "version": "1.0.0",
+  "description": "A modern, responsive web-based auction system where users can create auctions, place bids, and compete for items.",
+  "main": "index.html",
+  "scripts": {
+    "start": "npx http-server . -p 8080 -o",
+    "dev": "npx live-server --port=8080",
+    "lint": "eslint script.js",
+    "format": "prettier --write *.html *.css *.js *.md"
+  },
+  "keywords": [
+    "auction",
+    "bidding",
+    "javascript",
+    "html5",
+    "css3",
+    "responsive",
+    "web-app",
+    "frontend"
+  ],
+  "author": "Your Name <your.email@example.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/simple-auction-system.git"
+  },
+  "bugs": {
+    "url": "https://github.com/yourusername/simple-auction-system/issues"
+  },
+  "homepage": "https://github.com/yourusername/simple-auction-system#readme",
+  "devDependencies": {
+    "eslint": "^8.0.0",
+    "prettier": "^2.0.0",
+    "http-server": "^14.0.0",
+    "live-server": "^1.2.0"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ]
+}
