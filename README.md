@@ -1,4 +1,4 @@
-# Simple Auction System
+# Ethereum Auction System
 
 A modern, responsive web-based auction system where users can create auctions, place bids, and compete for items. Built with vanilla HTML, CSS, and JavaScript.
 
